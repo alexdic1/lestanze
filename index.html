@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ingresso al Cerchio</title>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+
+      <!-- Sfondo della sala iniziale -->
+      <a-sky src="sala-iniziale.png" rotation="0 -90 0"></a-sky>
+
+      <!-- Porta Eros -->
+      <a-link href="stanza-eros.html" position="-2 1.6 -3" title="Eros" scale="1.2 1.2 1" color="#FF4444"></a-link>
+
+      <!-- Porta Mistica -->
+      <a-link href="stanza-mistica.html" position="0 1.6 -3" title="Mistico" scale="1.2 1.2 1" color="#44FFAA"></a-link>
+
+      <!-- Porta Specchio -->
+      <a-link href="stanza-specchio.html" position="2 1.6 -3" title="Specchio" scale="1.2 1.2 1" color="#8888FF"></a-link>
+
+      <!-- Camera + cursore -->
+      <a-entity id="camera" camera look-controls>
+        <a-cursor color="white"></a-cursor>
+      </a-entity>
+
+    </a-scene>
+  </body>
+</html>
