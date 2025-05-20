@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Stanza</title>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <style>
+      body { margin: 0; padding: 0; overflow: hidden; }
+    </style>
+  </head>
+  <body>
+    <a-scene raycaster="objects: .clickable" cursor="rayOrigin: mouse">
+      <a-assets>
+        <img id="bg" src="assets/images/stanza1.png">
+        <img id="person" src="assets/images/guardiano-custode.png">
+        <audio id="voice" src="assets/audio/stanza1.mp3"></audio>
+      </a-assets>
+
+      <a-sky src="#bg" rotation="0 -90 0"></a-sky>
+      <a-image src="#person" position="0 1.6 -3" height="3" width="2.2"></a-image>
+
+      <!-- Pulsante ASCOLTA -->
+      <a-plane class="clickable" position="0 0.4 -2" width="1.6" height="0.5"
+               color="#111" material="opacity: 0.6; transparent: true"
+               event-set__enter="_event: mouseenter; color: #333"
+               event-set__leave="_event: mouseleave; color: #111"
+               onclick="document.querySelector('#voice').play()">
+        <a-text value="🎧 Ascolta il Custode" align="center" color="#FFD700" width="2.8" position="0 0 0.01"></a-text>
+      </a-plane>
+
+      <!-- Pulsante CHIAMA -->
+      <a-plane class="clickable" position="0 -0.2 -2" width="1.6" height="0.5"
+               color="#111" material="opacity: 0.6; transparent: true"
+               event-set__enter="_event: mouseenter; color: #333"
+               event-set__leave="_event: mouseleave; color: #111"
+               onclick="window.open('https://www.renaissancekingdoms.com/FichePersonnage.php?login=krystal.', '_blank')">
+        <a-text value="🔮 Chiama il Custode" align="center" color="#FFD700" width="2.8" position="0 0 0.01"></a-text>
+      </a-plane>
+
+      <a-camera position="0 1.6 0"></a-camera>
+    </a-scene>
+  </body>
+</html>
