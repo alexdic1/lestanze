@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Le Tre Stanze</title>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <style>
+      body { margin: 0; background: black; }
+    </style>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Simboli in alto -->
+      <a-image src="simbolo-veggente.png" position="-2 2.5 -4" width="1" height="1" onclick="window.location.href='stanza1.html'"></a-image>
+      <a-image src="simbolo-custode.png" position="0 2.5 -4" width="1" height="1" onclick="window.location.href='stanza2.html'"></a-image>
+      <a-image src="simbolo-spirito.png" position="2 2.5 -4" width="1" height="1" onclick="window.location.href='stanza3.html'"></a-image>
+
+      <!-- Porte simboliche sotto i simboli -->
+      <a-box position="-2 1 -4" depth="0.1" height="2" width="1.2" color="#111"></a-box>
+      <a-box position="0 1 -4" depth="0.1" height="2" width="1.2" color="#111"></a-box>
+      <a-box position="2 1 -4" depth="0.1" height="2" width="1.2" color="#111"></a-box>
+
+      <a-camera>
+        <a-cursor></a-cursor>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
