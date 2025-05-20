@@ -1,0 +1,24 @@
+<a-scene>
+  <a-assets>
+    <audio id="audio1" src="audio/stanza1.mp3"></audio>
+  </a-assets>
+  <a-plane src="guardiano-veggente.png" position="0 1.6 -3" width="1.5" height="2"></a-plane>
+  <a-entity sound="src: #audio1" id="sound1"></a-entity>
+  <a-entity geometry="primitive: plane; height: 0.4; width: 1.5"
+            material="color: #222; opacity: 0.9"
+            position="0 0.3 -2"
+            text="value: ASCOLTA; color: white; align: center; width: 4"
+            class="clickable"
+            onclick="document.querySelector('#sound1').components.sound.playSound();">
+  </a-entity>
+  <a-entity geometry="primitive: plane; height: 0.4; width: 1.5"
+            material="color: #444; opacity: 0.9"
+            position="0 -0.3 -2"
+            text="value: CHIAMA; color: white; align: center; width: 4"
+            class="clickable"
+            onclick="window.open('https://www.renaissancekingdoms.com/FichePersonnage.php?login=krystal.', '_blank');">
+  </a-entity>
+  <a-camera>
+    <a-cursor></a-cursor>
+  </a-camera>
+</a-scene>

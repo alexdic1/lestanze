@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Le Tre Stanze</title>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <style>
+      body { margin: 0; background: black; }
+      .circle {
+        width: 150px; height: 150px;
+        border-radius: 50%;
+        background-color: black;
+        display: inline-block;
+        margin: 50px;
+        background-size: cover;
+        background-position: center;
+        cursor: pointer;
+      }
+      .container { text-align: center; margin-top: 100px; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="circle" style="background-image: url('simbolo-veggente.png');" onclick="location.href='stanza1.html'"></div>
+      <div class="circle" style="background-image: url('simbolo-custode.png');" onclick="location.href='stanza2.html'"></div>
+      <div class="circle" style="background-image: url('simbolo-spirito.png');" onclick="location.href='stanza3.html'"></div>
+    </div>
+  </body>
+</html>
