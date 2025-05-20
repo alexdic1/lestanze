@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Stanza</title>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="bg" src="assets/images/stanza1.png">
+        <img id="person" src="assets/images/guardiano-custode.png">
+        <audio id="voice" src="assets/audio/stanza1.mp3"></audio>
+      </a-assets>
+
+      <a-sky src="#bg" rotation="0 -90 0"></a-sky>
+
+      <a-image src="#person" position="0 1.6 -3" height="3" width="2"></a-image>
+
+      <a-entity position="0 1 -2.5">
+        <a-text value='Ascolta' align="center" color="#FFF" width="2" position="0 0.5 0"></a-text>
+        <a-plane width="1" height="0.3" color="#222" onclick="document.querySelector('#voice').play()"></a-plane>
+      </a-entity>
+
+      <a-entity position="0 0.5 -2.5">
+        <a-text value='Chiama' align="center" color="#FFF" width="2" position="0 0.5 0"></a-text>
+        <a-plane width="1" height="0.3" color="#444" onclick="window.open('https://www.renaissancekingdoms.com/FichePersonnage.php?login=krystal.', '_blank')"></a-plane>
+      </a-entity>
+
+      <a-camera position="0 1.6 0"></a-camera>
+    </a-scene>
+  </body>
+</html>
