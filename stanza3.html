@@ -1,0 +1,23 @@
+
+<a-scene background="color: #000">
+  <a-assets>
+    <audio id="audio3" src="assets/audio/stanza3.mp3"></audio>
+    <img id="stanza3-bg" src="assets/img/stanza3.png">
+    <img id="btn-ascolta" src="assets/img/bottone_ascolta.png">
+    <img id="btn-chiama" src="assets/img/bottone_chiama.png">
+  </a-assets>
+
+  <a-sky src="#stanza3-bg"></a-sky>
+  <a-light type="ambient" color="#888"></a-light>
+  <a-light type="point" intensity="1" position="0 4 2"></a-light>
+
+  <a-plane src="assets/img/guardiano-spirito.png" position="0 1.6 -3" width="1.5" height="2"></a-plane>
+  <a-entity sound="src: #audio3" id="sound3"></a-entity>
+
+  <a-image src="#btn-ascolta" width="1.5" height="0.6" position="0 0.3 -2"
+           onclick="document.querySelector('#sound3').components.sound.playSound();"></a-image>
+  <a-image src="#btn-chiama" width="1.5" height="0.6" position="0 -0.5 -2"
+           onclick="window.open('https://www.renaissancekingdoms.com/FichePersonnage.php?login=sabatia', '_blank');"></a-image>
+
+  <a-camera><a-cursor></a-cursor></a-camera>
+</a-scene>
