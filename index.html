@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Le Stanze</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: 'Cinzel', serif;
+    }
+
+    a-scene {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+    }
+
+    .porta {
+      position: fixed;
+      width: 12vw;
+      height: 12vh;
+      bottom: 10vh;
+      background-color: rgba(0, 0, 0, 0.6);
+      border: 2px solid #fff;
+      border-radius: 12px;
+      text-align: center;
+      line-height: 12vh;
+      color: #fff;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      z-index: 2;
+    }
+
+    .porta:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-color: gold;
+      color: gold;
+    }
+
+    #porta1 { left: 18vw; }
+    #porta2 { left: 44vw; }
+    #porta3 { left: 70vw; }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- SCENA 3D DINAMICA -->
+  <a-scene embedded>
+    <a-assets>
+      <img id="sfondo" src="assets/images/sala-iniziale.png">
+    </a-assets>
+    <a-sky src="#sfondo" rotation="0 -90 0"></a-sky>
+    <a-camera></a-camera>
+  </a-scene>
+
+  <!-- BOTTONI HTML FISSI IN BASSO -->
+  <div id="porta1" class="porta" onclick="location.href='stanza1.html'">Apri la Porta 1</div>
+  <div id="porta2" class="porta" onclick="location.href='stanza2.html'">Apri la Porta 2</div>
+  <div id="porta3" class="porta" onclick="location.href='stanza3.html'">Apri la Porta 3</div>
+
+</body>
+</html>
