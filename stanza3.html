@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Stanza 3</title>
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      overflow: hidden;
+    }
+    .bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: url('stanza3.png') no-repeat center center;
+      background-size: cover;
+      z-index: 0;
+    }
+    .controls {
+      position: absolute;
+      bottom: 30px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      z-index: 10;
+    }
+    .btn {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid white;
+      color: white;
+      padding: 12px 24px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: white;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="controls">
+    <button class="btn" onclick="document.getElementById('audio').play()">Ascolta</button>
+    <button class="btn" onclick="window.location.href='https://www.renaissancekingdoms.com/FichePersonnage.php?login=flegetonte'">Chiama</button>
+  </div>
+  <audio id="audio" src="stanza3.mp3"></audio>
+</body>
+</html>
