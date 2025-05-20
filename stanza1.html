@@ -2,22 +2,18 @@
 <a-scene background="color: #000">
   <a-assets>
     <audio id="audio1" src="assets/audio/stanza1.mp3"></audio>
-    <img id="stanza1-bg" src="assets/img/stanza1.png">
+    <img id="sfondo1" src="assets/img/stanza1.png">
     <img id="btn-ascolta" src="assets/img/bottone_ascolta.png">
     <img id="btn-chiama" src="assets/img/bottone_chiama.png">
   </a-assets>
-
-  <a-sky src="#stanza1-bg"></a-sky>
-  <a-light type="ambient" color="#888"></a-light>
-  <a-light type="point" intensity="1" position="0 4 2"></a-light>
-
-  <a-plane src="assets/img/guardiano-veggente.png" position="0 1.6 -3" width="1.5" height="2"></a-plane>
+  <a-sky src="#sfondo1"></a-sky>
+  <a-light type="ambient" color="#999"></a-light>
+  <a-light type="point" intensity="1" position="0 3 2"></a-light>
+  <a-plane src="assets/img/guardiano-veggente.png" position="0 1.6 -3" width="1.6" height="2.4"></a-plane>
   <a-entity sound="src: #audio1" id="sound1"></a-entity>
-
-  <a-image src="#btn-ascolta" width="1.5" height="0.6" position="0 0.3 -2"
+  <a-image src="#btn-ascolta" position="0 0.3 -2" width="1.5" height="0.6"
            onclick="document.querySelector('#sound1').components.sound.playSound();"></a-image>
-  <a-image src="#btn-chiama" width="1.5" height="0.6" position="0 -0.5 -2"
+  <a-image src="#btn-chiama" position="0 -0.5 -2" width="1.5" height="0.6"
            onclick="window.open('https://www.renaissancekingdoms.com/FichePersonnage.php?login=krystal.', '_blank');"></a-image>
-
   <a-camera><a-cursor></a-cursor></a-camera>
 </a-scene>
