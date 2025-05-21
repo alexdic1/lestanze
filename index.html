@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Sala Iniziale</title>
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+  <a-scene background="color: black">
+    <a-assets>
+      <img id="sala-texture" src="sala-iniziale.png">
+    </a-assets>
+
+    <!-- Attiva supporto clic col mouse -->
+    <a-entity cursor="rayOrigin: mouse"></a-entity>
+
+    <!-- Sfondo immagine -->
+    <a-sky src="#sala-texture" rotation="0 -90 0"></a-sky>
+
+    <!-- Zone cliccabili invisibili sulle scritte -->
+    <a-plane position="-3 2 -4" width="2" height="1"
+             material="opacity: 0; transparent: true"
+             class="click-zone"
+             onclick="window.location.href='stanza1.html'"></a-plane>
+
+    <a-plane position="0 2 -4" width="2" height="1"
+             material="opacity: 0; transparent: true"
+             class="click-zone"
+             onclick="window.location.href='stanza2.html'"></a-plane>
+
+    <a-plane position="3 2 -4" width="2" height="1"
+             material="opacity: 0; transparent: true"
+             class="click-zone"
+             onclick="window.location.href='stanza3.html'"></a-plane>
+  </a-scene>
+</body>
+</html>
