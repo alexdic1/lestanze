@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Sala Iniziale</title>
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+  <a-scene cursor="rayOrigin: mouse" raycaster="objects: .click-zone" background="color: black">
+    <a-assets>
+      <img id="sala-texture" src="sala-iniziale.png">
+    </a-assets>
+
+    <!-- Sfondo -->
+    <a-sky src="#sala-texture" rotation="0 -90 0"></a-sky>
+
+    <!-- Zone invisibili cliccabili -->
+    <a-plane id="zona1" class="click-zone" position="-3 2 -4" width="2" height="1"
+             material="opacity: 0; transparent: true"></a-plane>
+
+    <a-plane id="zona2" class="click-zone" position="0 2 -4" width="2" height="1"
+             material="opacity: 0; transparent: true"></a-plane>
+
+    <a-plane id="zona3" class="click-zone" position="3 2 -4" width="2" height="1"
+             material="opacity: 0; transparent: true"></a-plane>
+  </a-scene>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelector('#zona1').addEventListener('click', () => {
+        window.location.href = 'stanza1.html';
+      });
+      document.querySelector('#zona2').addEventListener('click', () => {
+        window.location.href = 'stanza2.html';
+      });
+      document.querySelector('#zona3').addEventListener('click', () => {
+        window.location.href = 'stanza3.html';
+      });
+    });
+  </script>
+</body>
+</html>
